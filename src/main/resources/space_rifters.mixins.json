@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "net.valreyh.space_rifters.mixin.ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

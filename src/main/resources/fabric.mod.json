@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "space_rifters",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Space Rifters",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Valreyh"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,16 +14,16 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/space_rifters/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.valreyh.space_rifters.SpaceRifters"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "space_rifters.mixins.json"
   ],
 
   "depends": {
