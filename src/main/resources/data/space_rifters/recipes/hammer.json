@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XWW",
+    " RW",
+    " R "
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "minecraft:iron_block"
+    }
+  },
+  "result": {
+    "item": "space_rifters:hammer",
+    "count": 1
+  }
+}
