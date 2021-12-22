@@ -26,9 +26,13 @@ public class SpaceRifters implements ModInitializer {
 	public static final Block LUMOS_ORE = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f));
 	public static final Block CRUSHER = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
 	// ITEMS //
-	public static final Item LUMOS_FRAGMENT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item HAMMER = new Item(new FabricItemSettings().group(ItemGroup.TOOLS));
+
+	public static final Item LUMOS_FRAGMENT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item LUMOS_POWDER = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+	public static final Item RALIOS = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+	public static final Item NARSTONE = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+	public static final Item TEAR_OF_LIGHT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	// TOOLS //
 	// SCREEN HANDLER //
 	public static ScreenHandlerType<CrusherScreenHandler> CRUSHER_SCREEN_HANDLER = (ScreenHandlerType<CrusherScreenHandler>) ScreenHandlerRegistry.registerSimple(new Identifier("space_rifters", "crusher_screen"), CrusherScreenHandler::new);
@@ -40,12 +44,15 @@ public class SpaceRifters implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier("space_rifters", "crusher"), CRUSHER);
 		// REGISTER ITEMS //
 		Registry.register(Registry.ITEM, new Identifier("space_rifters","lumos_fragment"), LUMOS_FRAGMENT);
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "lumos_powder"), LUMOS_POWDER);
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "ralios"), RALIOS);
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "narstone"), NARSTONE);
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "tear_of_light"), TEAR_OF_LIGHT);
 
 		Registry.register(Registry.ITEM, new Identifier("space_rifters","lumos_ore"), new BlockItem(LUMOS_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "crusher"), new BlockItem(CRUSHER, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 
 		Registry.register(Registry.ITEM, new Identifier("space_rifters","hammer"), HAMMER);
-		Registry.register(Registry.ITEM, new Identifier("space_rifters", "lumos_powder"), LUMOS_POWDER);
 
 		LOGGER.info("Hello Fabric world!");
 
