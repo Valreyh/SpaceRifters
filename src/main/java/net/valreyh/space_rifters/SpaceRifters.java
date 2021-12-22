@@ -3,15 +3,16 @@ package net.valreyh.space_rifters;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.AnvilBlock;
+import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.valreyh.space_rifters.blocks.Crusher;
+import net.valreyh.space_rifters.handlers.CrusherScreenHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,12 +24,14 @@ public class SpaceRifters implements ModInitializer {
 
 	// BLOCKS //
 	public static final Block LUMOS_ORE = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f));
-	public static final Block CRUSHER = new Crusher(FabricBlockSettings.of(Material.METAL).strength(4.0f));
+	public static final Block CRUSHER = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
 	// ITEMS //
 	public static final Item LUMOS_FRAGMENT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item HAMMER = new Item(new FabricItemSettings().group(ItemGroup.TOOLS));
 	public static final Item LUMOS_POWDER = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	// TOOLS //
+	// SCREEN HANDLER //
+	public static ScreenHandlerType<CrusherScreenHandler> CRUSHER_SCREEN_HANDLER = (ScreenHandlerType<CrusherScreenHandler>) ScreenHandlerRegistry.registerSimple(new Identifier("space_rifters", "crusher_screen"), CrusherScreenHandler::new);
 
 	@Override
 	public void onInitialize() {

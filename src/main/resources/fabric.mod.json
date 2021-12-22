@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.valreyh.space_rifters.SpaceRifters"
+    ],
+    "client": [
+      "net.valreyh.space_rifters.SpaceRiftersClient"
     ]
   },
   "mixins": [
