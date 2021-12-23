@@ -21,7 +21,7 @@ public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
     private TextFieldWidget nameField;
     private final PlayerEntity player;
 
-    public CrusherScreen(CrusherScreenHandler handler, PlayerInventory playerInventory, Text title, TextFieldWidget nameField) {
+    public CrusherScreen(CrusherScreenHandler handler, PlayerInventory playerInventory, Text title) {
         super(handler, playerInventory, title, TEXTURE);
         this.player = playerInventory.player;
         this.titleX = 60;

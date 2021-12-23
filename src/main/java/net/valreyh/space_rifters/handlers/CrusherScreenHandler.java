@@ -12,8 +12,13 @@ import net.valreyh.space_rifters.SpaceRifters;
 import org.jetbrains.annotations.Nullable;
 
 public class CrusherScreenHandler extends ForgingScreenHandler {
-    public CrusherScreenHandler(@Nullable ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
-        super(type, syncId, playerInventory, context);
+
+    public CrusherScreenHandler(int syncId, PlayerInventory inventory) {
+        this(syncId, inventory, ScreenHandlerContext.EMPTY);
+    }
+
+    public CrusherScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
+        super(SpaceRifters.CRUSHER_SCREEN_HANDLER, syncId, playerInventory, context);
     }
 
     @Override
