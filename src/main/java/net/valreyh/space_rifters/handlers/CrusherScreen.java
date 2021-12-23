@@ -14,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
-    private static final Identifier TEXTURE = new Identifier("space_rifters:textures/gui/container/crushergui.png");
+    private static final Identifier TEXTURE = new Identifier("space_rifters", "textures/gui/container/crushergui.png");
     private TextFieldWidget nameField;
     private final PlayerEntity player;
 

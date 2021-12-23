@@ -41,19 +41,19 @@ public class SpaceRifters implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		// REGISTER BLOCKS //
-		Registry.register(Registry.BLOCK, new Identifier("space_rifters","lumos_ore"), LUMOS_ORE);
+		Registry.register(Registry.BLOCK, new Identifier("space_rifters", "lumos_ore"), LUMOS_ORE);
 		Registry.register(Registry.BLOCK, new Identifier("space_rifters", "crusher"), CRUSHER);
 		// REGISTER ITEMS //
-		Registry.register(Registry.ITEM, new Identifier("space_rifters","lumos_fragment"), LUMOS_FRAGMENT);
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "lumos_fragment"), LUMOS_FRAGMENT);
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "lumos_powder"), LUMOS_POWDER);
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "ralios"), RALIOS);
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "narstone"), NARSTONE);
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "tear_of_light"), TEAR_OF_LIGHT);
 
-		Registry.register(Registry.ITEM, new Identifier("space_rifters","lumos_ore"), new BlockItem(LUMOS_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "lumos_ore"), new BlockItem(LUMOS_ORE, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "crusher"), new BlockItem(CRUSHER, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 
-		Registry.register(Registry.ITEM, new Identifier("space_rifters","hammer"), HAMMER);
+		Registry.register(Registry.ITEM, new Identifier("space_rifters", "hammer"), HAMMER);
 
 		LOGGER.info("Hello Fabric world!");
 

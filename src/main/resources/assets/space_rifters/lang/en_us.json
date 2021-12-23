@@ -1,0 +1,14 @@
+{
+	"block.space_rifters.lumos_ore": "Lumos Ore",
+	"block.space_rifters.crusher": "Crusher",
+
+	"item.space_rifters.lumos_fragment": "Lumos Fragment",
+	"item.space_rifters.lumos_powder": "Lumos Powder",
+	"item.space_rifters.ralios": "Ralios",
+	"item.space_rifters.narstone": "Narstone",
+	"item.space_rifters.tear_of_light": "Tear of Light",
+
+	"item.space_rifters.hammer": "Hammer",
+
+	"container.space_rifters.crusher": "Crusher"
+}

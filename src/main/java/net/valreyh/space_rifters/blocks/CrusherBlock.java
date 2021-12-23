@@ -17,7 +17,7 @@ import net.valreyh.space_rifters.handlers.CrusherScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
 public class CrusherBlock extends Block {
-    private static final Text TITLE;
+    private static final Text TITLE = new TranslatableText("container.space_rifters.crusher");
     public CrusherBlock(Settings settings)
     {
         super(settings);
@@ -34,8 +34,5 @@ public class CrusherBlock extends Block {
     @Nullable
     public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
         return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> new CrusherScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos)), TITLE);
-    }
-    static {
-        TITLE = new TranslatableText("Crusher");
     }
 }
