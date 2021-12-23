@@ -54,9 +54,5 @@ public class SpaceRifters implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "crusher"), new BlockItem(CRUSHER, new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
 
 		Registry.register(Registry.ITEM, new Identifier("space_rifters", "hammer"), HAMMER);
-
-		LOGGER.info("Hello Fabric world!");
-
-
 	}
 }
