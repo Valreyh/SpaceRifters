@@ -35,7 +35,6 @@ public class SpaceRifters implements ModInitializer {
 	public static final Item TEAR_OF_LIGHT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	// TOOLS //
 	// SCREEN HANDLER //
-	public static ScreenHandlerType<CrusherScreenHandler> CRUSHER_SCREEN_HANDLER = (ScreenHandlerType<CrusherScreenHandler>) ScreenHandlerRegistry.registerSimple(new Identifier("space_rifters", "crusher_screen"), CrusherScreenHandler::new);
 
 	@Override
 	public void onInitialize() {

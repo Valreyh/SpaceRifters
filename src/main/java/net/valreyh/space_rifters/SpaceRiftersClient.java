@@ -9,6 +9,5 @@ import net.valreyh.space_rifters.handlers.CrusherScreenHandler;
 @Environment(EnvType.CLIENT)
 public class SpaceRiftersClient {
     public static void init() {
-        ScreenRegistry.register(SpaceRifters.CRUSHER_SCREEN_HANDLER, CrusherScreen::new);
     }
 }
