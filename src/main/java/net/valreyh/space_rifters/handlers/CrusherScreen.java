@@ -10,11 +10,12 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+import net.valreyh.space_rifters.SpaceRifters;
 
 
 @Environment(EnvType.CLIENT)
 public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
-    private static final Identifier TEXTURE = new Identifier("space_rifters", "textures/gui/container/crushergui.png");
+    private static final Identifier TEXTURE = SpaceRifters.id("textures/gui/container/crusher.png");
     private TextFieldWidget nameField;
     private final PlayerEntity player;
 
