@@ -7,9 +7,6 @@ import net.minecraft.client.gui.screen.ingame.ForgingScreen;
 import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.network.packet.c2s.play.RenameItemC2SPacket;
-import net.minecraft.screen.AnvilScreenHandler;
-import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
@@ -17,7 +14,7 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
-    private static final Identifier TEXTURE = new Identifier("src/ressources/assets/space_rifters/textures/gui/container/crushergui.png");
+    private static final Identifier TEXTURE = new Identifier("space_rifters:textures/gui/container/crushergui.png");
     private TextFieldWidget nameField;
     private final PlayerEntity player;
 
@@ -71,3 +68,4 @@ public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
         return this.nameField.keyPressed(keyCode, scanCode, modifiers) || this.nameField.isActive() || super.keyPressed(keyCode, scanCode, modifiers);
     }
 }
+

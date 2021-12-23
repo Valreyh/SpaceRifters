@@ -12,6 +12,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import net.valreyh.space_rifters.blocks.CrusherBlock;
 import net.valreyh.space_rifters.handlers.CrusherScreenHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,9 +25,9 @@ public class SpaceRifters implements ModInitializer {
 
 	// BLOCKS //
 	public static final Block LUMOS_ORE = new Block(FabricBlockSettings.of(Material.AMETHYST).strength(4.0f));
-	public static final Block CRUSHER = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
+	public static final Block CRUSHER = new CrusherBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f));
 	// ITEMS //
-	public static final Item HAMMER = new Item(new FabricItemSettings().group(ItemGroup.TOOLS));
+	public static final Item HAMMER = new Item(new FabricItemSettings().group(ItemGroup.TOOLS).maxDamage(10));
 
 	public static final Item LUMOS_FRAGMENT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item LUMOS_POWDER = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
@@ -55,6 +56,7 @@ public class SpaceRifters implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("space_rifters","hammer"), HAMMER);
 
 		LOGGER.info("Hello Fabric world!");
+
 
 	}
 }

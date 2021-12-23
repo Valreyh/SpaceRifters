@@ -3,13 +3,10 @@ package net.valreyh.space_rifters.handlers;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ForgingScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
-import net.minecraft.screen.ScreenHandlerType;
 import net.valreyh.space_rifters.SpaceRifters;
-import org.jetbrains.annotations.Nullable;
 
 public class CrusherScreenHandler extends ForgingScreenHandler {
 
@@ -23,22 +20,27 @@ public class CrusherScreenHandler extends ForgingScreenHandler {
 
     @Override
     protected boolean canTakeOutput(PlayerEntity player, boolean present) {
-        return false;
+        return true;
     }
 
     @Override
     protected void onTakeOutput(PlayerEntity player, ItemStack stack) {
-
-    }
+        this.input.removeStack(0,1);
+        ItemStack itemStack = this.input.getStack(1);
+        itemStack.setDamage(itemStack.getDamage()+2);
+        boolean bl = itemStack.getDamage() == 0;
+        if (bl)
+        {
+            this.input.removeStack(0,1);
+        }}
 
     @Override
     protected boolean canUse(BlockState state) {
-        return false;
+        return true;
     }
 
     @Override
     public void updateResult() {
-        Item Powder = SpaceRifters.LUMOS_POWDER;
         ItemStack itemStack = this.input.getStack(0);
         ItemStack itemStack2 = this.input.getStack(1);
         if (!itemStack.isEmpty() && !itemStack2.isEmpty())
@@ -47,7 +49,7 @@ public class CrusherScreenHandler extends ForgingScreenHandler {
             boolean bl2 = itemStack2.isOf(SpaceRifters.HAMMER);
             if (bl1 && bl2)
             {
-                this.output.setStack(0, new ItemStack(SpaceRifters.LUMOS_POWDER));
+                this.output.setStack(0, new ItemStack(SpaceRifters.LUMOS_POWDER,2));
             }
         }
 
