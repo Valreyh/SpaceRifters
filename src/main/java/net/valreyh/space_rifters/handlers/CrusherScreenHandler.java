@@ -9,7 +9,6 @@ import net.minecraft.screen.ScreenHandlerContext;
 import net.valreyh.space_rifters.SpaceRifters;
 
 public class CrusherScreenHandler extends ForgingScreenHandler {
-
     public CrusherScreenHandler(int syncId, PlayerInventory inventory) {
         this(syncId, inventory, ScreenHandlerContext.EMPTY);
     }
@@ -26,32 +25,27 @@ public class CrusherScreenHandler extends ForgingScreenHandler {
     @Override
     protected void onTakeOutput(PlayerEntity player, ItemStack stack) {
         this.input.removeStack(0,1);
-        ItemStack itemStack = this.input.getStack(1);
-        itemStack.setDamage(itemStack.getDamage()+2);
-        boolean bl = itemStack.getDamage() == 0;
-        if (bl)
-        {
-            this.input.removeStack(0,1);
-        }}
+        ItemStack hammerStack = this.input.getStack(1);
+        if(hammerStack.damage(2, this.player.getRandom(), null)) hammerStack.setCount(0);
+    }
 
     @Override
     protected boolean canUse(BlockState state) {
-        return true;
+        return state.isOf(SpaceRifters.CRUSHER);
     }
 
     @Override
     public void updateResult() {
-        ItemStack itemStack = this.input.getStack(0);
-        ItemStack itemStack2 = this.input.getStack(1);
-        if (!itemStack.isEmpty() && !itemStack2.isEmpty())
+        ItemStack ingredientStack = this.input.getStack(0);
+        ItemStack hammerStack = this.input.getStack(1);
+        if (!ingredientStack.isEmpty() && !hammerStack.isEmpty())
         {
-            boolean bl1 = itemStack.isOf(SpaceRifters.LUMOS_FRAGMENT);
-            boolean bl2 = itemStack2.isOf(SpaceRifters.HAMMER);
+            boolean bl1 = ingredientStack.isOf(SpaceRifters.LUMOS_FRAGMENT);
+            boolean bl2 = hammerStack.isOf(SpaceRifters.HAMMER);
             if (bl1 && bl2)
             {
                 this.output.setStack(0, new ItemStack(SpaceRifters.LUMOS_POWDER,2));
             }
         }
-
     }
 }

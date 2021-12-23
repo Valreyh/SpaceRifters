@@ -18,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class CrusherBlock extends Block {
     private static final Text TITLE = new TranslatableText("container.space_rifters.crusher");
+
     public CrusherBlock(Settings settings)
     {
         super(settings);

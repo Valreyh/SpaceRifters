@@ -25,17 +25,19 @@ public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
         this.titleX = 60;
     }
 
+    @Override
     public void handledScreenTick() {
         super.handledScreenTick();
         this.nameField.tick();
     }
 
+    @Override
     protected void setup() {
         assert this.client != null;
         this.client.keyboard.setRepeatEvents(true);
         int i = (this.width - this.backgroundWidth) / 2;
         int j = (this.height - this.backgroundHeight) / 2;
-        this.nameField = new TextFieldWidget(this.textRenderer, i + 62, j + 24, 103, 12, new TranslatableText("Crusher"));
+        this.nameField = new TextFieldWidget(this.textRenderer, i + 62, j + 24, 103, 12, new TranslatableText("container.crush"));
         this.nameField.setFocusUnlocked(false);
         this.nameField.setEditableColor(-1);
         this.nameField.setUneditableColor(-1);
@@ -47,18 +49,21 @@ public class CrusherScreen extends ForgingScreen<CrusherScreenHandler> {
         this.nameField.setEditable(false);
     }
 
+    @Override
     public void resize(MinecraftClient client, int width, int height) {
         String string = this.nameField.getText();
         this.init(client, width, height);
         this.nameField.setText(string);
     }
 
+    @Override
     public void removed() {
         super.removed();
         assert this.client != null;
         this.client.keyboard.setRepeatEvents(false);
     }
 
+    @Override
     public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
         if (keyCode == 256) {
             assert this.client != null;
