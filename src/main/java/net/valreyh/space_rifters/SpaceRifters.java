@@ -32,6 +32,7 @@ public class SpaceRifters implements ModInitializer {
 	public static final Item LUMOS_CRAFTING_CORE = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 
 	public static final Item LUMOS_FRAGMENT = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+	public static final Item LUMOS = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item LUMOS_POWDER = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item RALIOS = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
 	public static final Item NARSTONE = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
@@ -49,6 +50,7 @@ public class SpaceRifters implements ModInitializer {
 		Registry.register(Registry.BLOCK, id("lumos_station"), LUMOS_STATION);
 		// REGISTER ITEMS //
 		Registry.register(Registry.ITEM, id("lumos_fragment"), LUMOS_FRAGMENT);
+		Registry.register(Registry.ITEM, id("lumos"), LUMOS);
 		Registry.register(Registry.ITEM, id("lumos_powder"), LUMOS_POWDER);
 		Registry.register(Registry.ITEM, id("ralios"), RALIOS);
 		Registry.register(Registry.ITEM, id("narstone"), NARSTONE);

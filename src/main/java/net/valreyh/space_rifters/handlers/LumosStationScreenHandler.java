@@ -1,6 +1,5 @@
 package net.valreyh.space_rifters.handlers;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.CraftingInventory;
@@ -105,7 +104,7 @@ public class LumosStationScreenHandler extends AbstractRecipeScreenHandler<Craft
     }
 
     public boolean canUse(PlayerEntity player) {
-        return canUse(this.context, player, Blocks.CRAFTING_TABLE);
+        return canUse(this.context, player, SpaceRifters.LUMOS_STATION);
     }
 
     public ItemStack transferSlot(PlayerEntity player, int index) {

@@ -14,6 +14,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.valreyh.space_rifters.handlers.LumosStationScreenHandler;
+import org.jetbrains.annotations.Nullable;
 
 public class LumosStationBlock extends Block {
     private static final Text TITLE = new TranslatableText("container.space_rifters.lumos_station");
@@ -22,6 +23,7 @@ public class LumosStationBlock extends Block {
         super(settings);
     }
 
+    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.isClient) {
             return ActionResult.SUCCESS;
@@ -31,7 +33,10 @@ public class LumosStationBlock extends Block {
         }
     }
 
+    @Nullable
     public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
         return new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> new LumosStationScreenHandler(syncId, inventory, ScreenHandlerContext.create(world, pos)), TITLE);
     }
 }
+
+
