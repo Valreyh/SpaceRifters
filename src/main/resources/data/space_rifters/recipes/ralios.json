@@ -1,16 +1,22 @@
 {
-  "type": "space_rifters:spacerifters_recipe",
+  "type": "space_rifters:recipe",
   "pattern": [
     "LFL",
     "FDF",
     "LFL"
   ],
-  "inputA" : {
-    "item": "space_rifters:hammer"
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "F": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "space_rifters:lumos"
+    }
   },
-  "inputB": {
-    "item": "space_rifters:narstone"
-  },
-  "outputItem": "space_rifters:ralios",
-  "outputAmount": "1"
+  "result": {
+    "item": "space_rifters:ralios"
+  }
 }
