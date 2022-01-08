@@ -1,0 +1,16 @@
+{
+  "type": "space_rifters:spacerifters_recipe",
+  "pattern": [
+    "LFL",
+    "FDF",
+    "LFL"
+  ],
+  "inputA" : {
+    "item": "space_rifters:hammer"
+  },
+  "inputB": {
+    "item": "space_rifters:narstone"
+  },
+  "outputItem": "space_rifters:ralios",
+  "outputAmount": "1"
+}
