@@ -16,6 +16,8 @@ import net.valreyh.space_rifters.blocks.CrusherBlock;
 import net.valreyh.space_rifters.blocks.LumosStationBlock;
 import net.valreyh.space_rifters.handlers.CrusherScreenHandler;
 import net.valreyh.space_rifters.handlers.LumosStationScreenHandler;
+import net.valreyh.space_rifters.objects.recipe.SpaceRiftersRecipe;
+import net.valreyh.space_rifters.objects.recipe.serializer.SpaceRiftersRecipeSerializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -44,6 +46,9 @@ public class SpaceRifters implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		// REGISTER RECIPE //
+		Registry.register(Registry.RECIPE_SERIALIZER, SpaceRiftersRecipeSerializer.ID, SpaceRiftersRecipeSerializer.INSTANCE);
+		Registry.register(Registry.RECIPE_TYPE, new Identifier("example", SpaceRiftersRecipe.Type.ID), SpaceRiftersRecipe.Type.INSTANCE);
 		// REGISTER BLOCKS //
 		Registry.register(Registry.BLOCK, id("lumos_ore"), LUMOS_ORE);
 		Registry.register(Registry.BLOCK, id("crusher"), CRUSHER);

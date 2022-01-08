@@ -20,6 +20,7 @@ import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 import net.valreyh.space_rifters.SpaceRifters;
+import net.valreyh.space_rifters.objects.recipe.SpaceRiftersRecipe;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -65,9 +66,9 @@ public class LumosStationScreenHandler extends AbstractRecipeScreenHandler<Craft
         if (!world.isClient) {
             ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)player;
             ItemStack itemStack = ItemStack.EMPTY;
-            Optional<CraftingRecipe> optional = Objects.requireNonNull(world.getServer()).getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, world);
-            if (optional.isPresent()) {
-                CraftingRecipe craftingRecipe = optional.get();
+            Optional<SpaceRiftersRecipe> match = world.getRecipeManager().getFirstMatch(SpaceRiftersRecipe.Type.INSTANCE, craftingInventory, world);
+            if (match.isPresent()) {
+                SpaceRiftersRecipe craftingRecipe = match.get();
                 if (resultInventory.shouldCraftRecipe(world, serverPlayerEntity, craftingRecipe)) {
                     itemStack = craftingRecipe.craft(craftingInventory);
                 }
