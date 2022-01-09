@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "space_rifters:item/meteor_fragment"
+    "layer0": "space_rifters:item/crusher_core"
   }
 }

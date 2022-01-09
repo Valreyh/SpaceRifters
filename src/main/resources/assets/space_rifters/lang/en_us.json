@@ -7,8 +7,14 @@
 	"item.space_rifters.ralios": "Ralios",
 	"item.space_rifters.narstone": "Narstone",
 	"item.space_rifters.tear_of_light": "Tear of Light",
+	"item.space_rifters.meteor_fragment": "Meteor Fragment",
 
 	"item.space_rifters.hammer": "Hammer",
+	"item.space_rifters.reinforced_bottle": "Reinforced Bottle",
+
+	"item.space_rifters.crusher_core": "Crusher Core",
+	"item.space_rifters.lumos_crafting_core": "Lumos Crafting Core",
+	"item.space_rifters.volcano_orb": "Volcano Orb",
 
 	"container.space_rifters.crusher": "Crusher",
 	"container.crush": "Crush",

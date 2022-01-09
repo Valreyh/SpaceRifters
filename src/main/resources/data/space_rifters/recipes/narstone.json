@@ -1,0 +1,22 @@
+{
+  "type": "space_rifters:recipe",
+  "pattern": [
+    "LRL",
+    "RPR",
+    "LRL"
+  ],
+  "key": {
+    "R": {
+      "item": "space_rifters:ralios"
+    },
+    "P": {
+      "item": "space_rifters:lumos_powder"
+    },
+    "L": {
+      "item": "space_rifters:lumos"
+    }
+  },
+  "result": {
+    "item": "space_rifters:narstone"
+  }
+}

@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "space_rifters:block/crusher"
+    "particle": "space_rifters:block/crusher_side",
+    "north": "space_rifters:block/crusher_side",
+    "south": "space_rifters:block/crusher_side",
+    "east": "space_rifters:block/crusher_side",
+    "west": "space_rifters:block/crusher_side",
+    "up": "space_rifters:block/crusher_top",
+    "down": "space_rifters:block/crusher_side"
   }
 }

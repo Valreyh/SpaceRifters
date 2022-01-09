@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "space_rifters:block/lumos_station" }
+    "": {
+      "model": "space_rifters:block/lumos_station"
+    }
   }
 }

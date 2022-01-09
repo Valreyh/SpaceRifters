@@ -1,0 +1,22 @@
+{
+  "type": "space_rifters:recipe",
+  "pattern": [
+    "LNL",
+    "NDN",
+    "LNL"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "N": {
+      "item": "space_rifters:narstone"
+    },
+    "L": {
+      "item": "space_rifters:lumos"
+    }
+  },
+  "result": {
+    "item": "space_rifters:tear_of_light"
+  }
+}

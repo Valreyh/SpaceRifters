@@ -1,3 +1,6 @@
 {
-  "parent": "space_rifters:item/volcano_orb"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "space_rifters:item/volcano_orb"
+  }
 }

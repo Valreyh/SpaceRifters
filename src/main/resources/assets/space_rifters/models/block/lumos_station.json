@@ -1,6 +1,11 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "space_rifters:block/lumos_station"
+    "north": "space_rifters:block/lumos_crafting_table_side",
+    "south": "space_rifters:block/lumos_crafting_table_side",
+    "east": "space_rifters:block/lumos_crafting_table_side",
+    "west": "space_rifters:block/lumos_crafting_table_side",
+    "up": "space_rifters:block/lumos_crafting_table_top",
+    "down": "minecraft:block/iron_block"
   }
 }
