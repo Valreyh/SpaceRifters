@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 import net.valreyh.space_rifters.handlers.CrusherScreen;
 import net.valreyh.space_rifters.handlers.LumosStationScreen;
-
 import static net.valreyh.space_rifters.SpaceRifters.LUMOS_CROP_BLOCK;
 
 @Environment(EnvType.CLIENT)

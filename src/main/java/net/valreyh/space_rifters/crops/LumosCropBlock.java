@@ -5,7 +5,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.mob.RavagerEntity;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
@@ -44,7 +43,7 @@ public class LumosCropBlock extends LumosPlantBlock implements Fertilizable {
     }
 
     public int getMaxAge() {
-        return 7;
+        return MAX_AGE;
     }
 
     protected int getAge(BlockState state) {
@@ -56,13 +55,14 @@ public class LumosCropBlock extends LumosPlantBlock implements Fertilizable {
     }
 
     public boolean isMature(BlockState state) {
-        return state.get(this.getAgeProperty()) >= this.getMaxAge();
+        return state.get(this.getAgeProperty()) < this.getMaxAge();
     }
 
     public boolean hasRandomTicks(BlockState state) {
-        return !this.isMature(state);
+        return this.isMature(state);
     }
 
+    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (world.getBaseLightLevel(pos, 0) >= 9) {
             int i = this.getAge(state);
@@ -148,7 +148,7 @@ public class LumosCropBlock extends LumosPlantBlock implements Fertilizable {
     }
 
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
-        return !this.isMature(state);
+        return this.isMature(state);
     }
 
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {

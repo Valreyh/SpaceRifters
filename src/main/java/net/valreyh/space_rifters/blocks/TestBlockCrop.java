@@ -18,7 +18,7 @@ public class TestBlockCrop extends LumosCropBlock {
         }
 
         protected ItemConvertible getSeedsItem() {
-                return SpaceRifters.LUMOS;
+                return SpaceRifters.LUMOS_SEED;
         }
 
         public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
