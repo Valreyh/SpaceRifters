@@ -5,14 +5,17 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.*;
+import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.valreyh.space_rifters.blocks.CrusherBlock;
 import net.valreyh.space_rifters.blocks.LumosStationBlock;
+import net.valreyh.space_rifters.crops.LumosCropBlock;
 import net.valreyh.space_rifters.handlers.CrusherScreenHandler;
 import net.valreyh.space_rifters.handlers.LumosStationScreenHandler;
 import net.valreyh.space_rifters.objects.recipe.SpaceRiftersRecipe;
@@ -31,9 +34,13 @@ public class SpaceRifters implements ModInitializer {
 	public static final Block LUMOS_STATION = new LumosStationBlock(FabricBlockSettings.of(Material.WOOD).strength(1.0f));
 	public static final Block EXTRACTOR = new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f));
 	public static final Block LUMOS_DIRT = new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(1.0f));
+
+	public static final LumosCropBlock LUMOS_CROP_BLOCK = new LumosCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
+
 	// ITEMS //
 	public static final Item HAMMER = new Item(new FabricItemSettings().group(ItemGroup.TOOLS).maxDamage(10));
 	public static final Item REINFORCED_BOTTLE = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+	public static final Item LUMOS_SEED = new AliasedBlockItem(SpaceRifters.LUMOS_CROP_BLOCK, new Item.Settings().group(ItemGroup.MISC));
 
 	public static final Item LUMOS_CRAFTING_CORE = new Item(new FabricItemSettings().group(ItemGroup.MISC));
 	public static final Item CRUSHER_CORE = new Item(new FabricItemSettings().group(ItemGroup.MISC));
@@ -67,6 +74,7 @@ public class SpaceRifters implements ModInitializer {
 		Registry.register(Registry.BLOCK, id("meteor_ore"), METEOR_ORE);
 		Registry.register(Registry.BLOCK, id("extractor"), EXTRACTOR);
 		Registry.register(Registry.BLOCK, id("lumos_dirt"), LUMOS_DIRT);
+		Registry.register(Registry.BLOCK, id("lumos_crop_block"), LUMOS_CROP_BLOCK);
 
 		// REGISTER ITEMS //
 
@@ -89,6 +97,7 @@ public class SpaceRifters implements ModInitializer {
 		// Items //
 		Registry.register(Registry.ITEM, id("hammer"), HAMMER);
 		Registry.register(Registry.ITEM, id("reinforced_bottle"), REINFORCED_BOTTLE);
+		Registry.register(Registry.ITEM, id("lumos_seed"), LUMOS_SEED);
 		// Utility //
 		Registry.register(Registry.ITEM, id("lumos_crafting_core"), LUMOS_CRAFTING_CORE);
 		Registry.register(Registry.ITEM, id("crusher_core"), CRUSHER_CORE);
